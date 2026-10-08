@@ -1,0 +1,129 @@
+{
+  "judge": "rm-panel:Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+  "outputs_sha256": "dba764797f93f0a21e8cc3c9a450e4a50c2874284c03dc241c9046bc3bf23bb6",
+  "sanity_accuracy": 1.0,
+  "sanity": {
+    "Skywork/Skywork-Reward-V2-Qwen3-4B": 0.6666666666666666,
+    "Skywork/Skywork-Reward-V2-Llama-3.2-3B": 1.0
+  },
+  "overall": {
+    "n": 58,
+    "n_failed": 0,
+    "dpo_wins": 10,
+    "sft_wins": 9,
+    "ties": 39,
+    "dpo_win_rate": 0.5086206896551724,
+    "win_rate_ci95": [
+      0.4396551724137931,
+      0.5775862068965517
+    ],
+    "position_consistency": null,
+    "longer_answer_won_frac": 0.7894736842105263,
+    "length_matched_n": 54,
+    "length_matched_win_rate": 0.5462962962962963,
+    "mean_chars_sft": 624.4827586206897,
+    "mean_chars_dpo": 620.1896551724138
+  },
+  "heldout": {
+    "n": 50,
+    "n_failed": 0,
+    "dpo_wins": 9,
+    "sft_wins": 6,
+    "ties": 35,
+    "dpo_win_rate": 0.53,
+    "win_rate_ci95": [
+      0.46,
+      0.6
+    ],
+    "position_consistency": null,
+    "longer_answer_won_frac": 0.7333333333333333,
+    "length_matched_n": 48,
+    "length_matched_win_rate": 0.5520833333333334,
+    "mean_chars_sft": 631.36,
+    "mean_chars_dpo": 628.54
+  },
+  "helpfulness": {
+    "n": 4,
+    "n_failed": 0,
+    "dpo_wins": 1,
+    "sft_wins": 0,
+    "ties": 3,
+    "dpo_win_rate": 0.625,
+    "win_rate_ci95": [
+      0.5,
+      0.875
+    ],
+    "position_consistency": null,
+    "longer_answer_won_frac": 1.0,
+    "length_matched_n": 4,
+    "length_matched_win_rate": 0.625,
+    "mean_chars_sft": 647.5,
+    "mean_chars_dpo": 697.5
+  },
+  "safety": {
+    "n": 4,
+    "n_failed": 0,
+    "dpo_wins": 0,
+    "sft_wins": 3,
+    "ties": 1,
+    "dpo_win_rate": 0.125,
+    "win_rate_ci95": [
+      0.0,
+      0.375
+    ],
+    "position_consistency": null,
+    "longer_answer_won_frac": 1.0,
+    "length_matched_n": 2,
+    "length_matched_win_rate": 0.25,
+    "mean_chars_sft": 515.5,
+    "mean_chars_dpo": 438.5
+  },
+  "per_judge": {
+    "Skywork/Skywork-Reward-V2-Qwen3-4B": {
+      "n": 50,
+      "n_failed": 0,
+      "dpo_wins": 5,
+      "sft_wins": 10,
+      "ties": 35,
+      "dpo_win_rate": 0.45,
+      "win_rate_ci95": [
+        0.38,
+        0.52
+      ],
+      "position_consistency": null,
+      "longer_answer_won_frac": 0.6,
+      "length_matched_n": 48,
+      "length_matched_win_rate": 0.46875,
+      "mean_chars_sft": 631.36,
+      "mean_chars_dpo": 628.54,
+      "score_length_spearman": 0.10953954391786197
+    },
+    "Skywork/Skywork-Reward-V2-Llama-3.2-3B": {
+      "n": 50,
+      "n_failed": 0,
+      "dpo_wins": 9,
+      "sft_wins": 6,
+      "ties": 35,
+      "dpo_win_rate": 0.53,
+      "win_rate_ci95": [
+        0.46,
+        0.6
+      ],
+      "position_consistency": null,
+      "longer_answer_won_frac": 0.7333333333333333,
+      "length_matched_n": 48,
+      "length_matched_win_rate": 0.5520833333333334,
+      "mean_chars_sft": 631.36,
+      "mean_chars_dpo": 628.54,
+      "score_length_spearman": 0.09298556791098728
+    }
+  },
+  "judge_agreement": {
+    "judges": [
+      "Skywork/Skywork-Reward-V2-Qwen3-4B",
+      "Skywork/Skywork-Reward-V2-Llama-3.2-3B"
+    ],
+    "n": 58,
+    "agreement": 0.8448275862068966
+  }
+}
