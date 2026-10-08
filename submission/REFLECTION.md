@@ -13,7 +13,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| GPU / VRAM | Google Colab Tesla T4, 14,563 GB VRAM theo Unsloth |
+| GPU / VRAM | Google Colab Tesla T4, khoảng 14,56 GiB VRAM khả dụng theo Unsloth (GPU danh nghĩa 16 GB) |
 | Mô hình gốc | `unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit` |
 | Dữ liệu SFT | `saillab/alpaca-vietnamese-cleaned`, 1.000 mẫu, 1 epoch (125 steps) |
 | Dữ liệu sở thích | `sailor2/sea-ultrafeedback-onpolicy`, tiếng Việt, 800 train / 100 held-out |
@@ -76,7 +76,7 @@ Hai reward models đưa ra kết luận khác nhau: trên 50 held-out, Qwen3 ch�
 | 0,1 | +0,082362 | 66% | `INTENDED` | Thí nghiệm NB3 đã chạy, không phải kết quả của sweep độc lập |
 | 0,5 | Chưa chạy | Chưa chạy | — | Giả thuyết |
 
-**Giả thuyết (chưa kiểm chứng):** Với β = 0,05, tín hiệu preference được nhân với hệ số nhỏ hơn trong DPO loss, có thể làm thay đổi tốc độ tối ưu và reward margin khi giữ nguyên các siêu tham số khác. Với β = 0,5, tín hiệu preference được khuếch đại mạnh hơn nhưng có thể dẫn đến động lực gradient khác và không đảm bảo win rate cao hơn. Tôi dự đoán cần chạy beta-sweep và so sánh cả held-out reward accuracy lẫn chất lượng câu trả lời trước khi chọn β tối ưu.
+**Giả thuyết (chưa kiểm chứng):** Khi thay đổi β, độ nhạy của DPO loss với chênh lệch log-probability cũng thay đổi. Với β = 0,05, policy thường được phép lệch xa reference hơn; với β = 0,5, quá trình tối ưu thường có xu hướng giữ policy gần reference hơn. Tuy nhiên, kết quả thực tế còn phụ thuộc learning rate, dữ liệu và quá trình huấn luyện. Tôi cần chạy beta-sweep và so sánh reward margin, held-out accuracy cùng chất lượng câu trả lời trước khi xác định β tối ưu.
 
 ---
 
